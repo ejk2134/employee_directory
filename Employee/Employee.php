@@ -1,5 +1,5 @@
 <?php
-class Employees{
+class Employee{
 
     //Database connection
     private $conn;

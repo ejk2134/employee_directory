@@ -1,9 +1,9 @@
 <?php
 class Database{
     //Local database credentials
-    private $host = "localhost";
+    private $host = "localhost:8889";
     private $name = "workplace";
-    private $user = "admin";
+    private $user = "root";
     private $password = "";
     public $conn;
 
