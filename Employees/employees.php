@@ -1,5 +1,8 @@
 <?php
 class Employees{
-    private 
+    $id;
+    $last_name;
+
+    function __construct()
 }
 ?>
