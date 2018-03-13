@@ -15,10 +15,10 @@ $database = new Database();
 $database_connection = $database->getConnection();
 
 //Instantiate Employee object
-$employee = new Employee();
+$employee = new Employee($database_connection);
 
 //Get posted data
-$posted_data = json_decode(file_get_contents("php:/input"));
+$posted_data = json_decode(file_get_contents("php://input"));
 
 //Set values of new record
 $employee->last_name = $posted_data->last_name;
@@ -32,7 +32,7 @@ $employee->phone = $posted_data->phone;
 $employee->salary = $posted_data->salary;
 
 //Construct new Employee
-if($employee->create()){
+if($employee->post()){
     echo '{';
         echo '"message": "Employee added."';
     echo '}';
