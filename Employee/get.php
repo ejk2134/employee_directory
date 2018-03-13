@@ -4,7 +4,7 @@ header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 
 //Include
-include_once '../config/database.php';
+include_once '../config/Database.php';
 include_once './Employee.php';
 
 //Instantiate Database object
