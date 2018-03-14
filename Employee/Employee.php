@@ -22,6 +22,11 @@ class Employee{
         $this->conn= $connection;
     }
 
+    //Delete employee
+    function delete(){
+        
+    }
+
     //Get employees
     function getAll(){
 

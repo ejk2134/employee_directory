@@ -32,14 +32,13 @@ $employee->phone = $posted_data->phone;
 $employee->salary = $posted_data->salary;
 
 //Construct new Employee
+$response = null;
 if($employee->post()){
-    echo '{';
-        echo '"message": "Employee added."';
-    echo '}';
+    $response['message'] = 'Employee added.';
 //If unable to construct new Employee
 }else{
-    echo '{';
-        echo '"message": "Unable to add employee"';
-    echo '}';
+    $response['message'] = 'Unable to add employee.';
 }
+//Return appropriate response to front end.
+echo json_encode($response);
 ?>
