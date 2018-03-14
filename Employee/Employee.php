@@ -57,7 +57,7 @@ class Employee{
         return $statement;
     }
 
-    //POST employee
+    //Create employee
     function post(){
         //Insert query
         $query = "INSERT INTO workplace.employees SET 
@@ -100,6 +100,11 @@ class Employee{
         if($statement->execute()){
             return true;
         }
+    }
+
+    // Update employee information
+    function update(){
+
     }
 }
 ?>
