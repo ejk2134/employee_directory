@@ -1,4 +1,3 @@
-<?php    
+<?php
+    echo '<div>Echoed butts</div>';
 ?>
-
-<div>Butts</div>

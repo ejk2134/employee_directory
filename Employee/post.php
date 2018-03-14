@@ -39,6 +39,7 @@ if($employee->post()){
 }else{
     $response['message'] = 'Unable to add employee.';
 }
-//Return appropriate response to front end.
+
+//Send response to front end.
 echo json_encode($response);
 ?>

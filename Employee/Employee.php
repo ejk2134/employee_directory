@@ -24,7 +24,22 @@ class Employee{
 
     //Delete employee
     function delete(){
-        
+        // Delete query
+        $query = "DELETE FROM workplace.employees WHERE id = ?";
+
+        // Prepare query statement
+        $statement = $this->conn->prepare($query);
+
+        // Sanitize submitted value
+        $this->id=htmlspecialchars(strip_tags($this->id));
+
+        // Bind submitted value to query statement
+        $statement->bindParam(1, $this->id);
+
+        // Execute query
+        if ($statement->execute()){
+            return true;
+        }
     }
 
     //Get employees
@@ -70,7 +85,7 @@ class Employee{
         $this->phone=htmlspecialchars(strip_tags($this->phone));
         $this->salary=htmlspecialchars(strip_tags($this->salary));
 
-        //Bind values to $statement
+        //Bind values to query statement
         $statement->bindParam(":last_name", $this->last_name);
         $statement->bindParam(":first_name", $this->first_name);
         $statement->bindParam(":title", $this->title);
@@ -85,8 +100,6 @@ class Employee{
         if($statement->execute()){
             return true;
         }
-
-        return false;
     }
 }
 ?>
