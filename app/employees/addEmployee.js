@@ -6,15 +6,15 @@ const addEmployee = ()=>{
         to server
     */
     var newEmployee = JSON.stringify({
-        last_name: $('#last-name').val(),
-        first_name: $('#first-name').val(),
-        title: $('#title').val(),
+        last_name: trim($('#last-name').val()),
+        first_name: trim($('#first-name').val()),
+        title: trim($('#title').val()),
         salary: parseInt($('#salary').val()),
-        address: $('#address').val(),
-        city: $('#city').val(),
-        state: $('#state').val(),
-        zip: $('#zip').val(),
-        phone: $('#phone').val()
+        address: trim($('#address').val()),
+        city: trim($('#city').val()),
+        state: trim($('#state').val()),
+        zip: trim($('#zip').val()),
+        phone: Trim($('#phone').val())
     });
 
     // Request to server
