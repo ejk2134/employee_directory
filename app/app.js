@@ -1,7 +1,7 @@
 // On page load
 const onReady = ()=>{
-    console.log('Scripts sourced');
-    get();
+    // Request employees from server and display them to user
+    getEmployees();
 }
 
 // Run scripts

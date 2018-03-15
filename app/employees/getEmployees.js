@@ -1,4 +1,4 @@
-const get = ()=>{
+const getEmployees = ()=>{
     // Get all employee records from server
     $.ajax({
         type: 'GET',

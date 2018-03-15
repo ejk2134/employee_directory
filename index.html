@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +8,39 @@
     <!-- jQuery -->
     <script src="app/assets/jquery.js"></script>
     <!-- AJAX request modules -->
-    <script src="app/employees/get.js"></script>
+    <script src="app/employees/getEmployees.js"></script>
     <!-- Frontend scripts -->
     <script src="app/app.js"></script>
     <!-- Stylesheet -->
     <link rel="stylesheet" href="app/assets/style.css">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Employee directory</h1>
 
     <!-- Add employee form -->
-    <input type="text">
+    <form>
+        Last name
+        <input id="last-name" type="text">
+        First name
+        <input id="first-name" type="text">
+        Job title
+        <input id="title" type="text">
+        Salary
+        <input id="salary" type="text">
+        Address
+        <input id="address" type="text">
+        City
+        <input id="city" type="text">
+        State
+        <input id="state" type="text">
+        ZIP
+        <input id="zip" type="text">
+        Phone number
+        <input id="phone" type="text">
+    </form>
+
 
     <!-- Employee directory table -->
     <table>
@@ -46,7 +68,7 @@
                     State
                 </th>
                 <th>
-                    Zip
+                    ZIP
                 </th>
                 <th>
                     Phone number
@@ -57,4 +79,5 @@
         </tbody>
     </table>
 </body>
+
 </html>
