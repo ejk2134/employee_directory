@@ -24,11 +24,11 @@ $received_data = json_decode(file_get_contents("php://input"));
 $employee->id = $received_data->id;
 
 // Delete employee from database
-$response = null;
+$response = new stdClass();
 if($employee->delete()){
-    $response['message'] = 'Employee removed.';
+    $response->message = 'Employee removed.';
 }else{
-    $response['message'] = 'Could not remove employee.';
+    $response->message = 'Could not remove employee.';
 }
 
 // Send response to front end.
