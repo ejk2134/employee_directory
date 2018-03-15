@@ -1,13 +1,13 @@
 <?php
 class Database{
-    //Local database credentials
+    // Local database credentials
     private $host = "localhost:8889";
     private $name = "workplace";
     private $user = "root";
     private $password = "";
     public $conn;
 
-    //Connect to mySQL database
+    // Connect to mySQL database
     public function getConnection(){
         $this->conn = null;
 
