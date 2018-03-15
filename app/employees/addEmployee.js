@@ -1,20 +1,20 @@
 // Submit new employee to directory
-const addEmployee = ()=>{
+function addEmployee(){
     /* 
         Get values from New Employee Form
         and create json object to be sent 
         to server
     */
     var newEmployee = JSON.stringify({
-        last_name: trim($('#last-name').val()),
-        first_name: trim($('#first-name').val()),
-        title: trim($('#title').val()),
+        last_name: $('#last-name').val().trim(),
+        first_name: $('#first-name').val().trim(),
+        title: $('#title').val().trim(),
         salary: parseInt($('#salary').val()),
-        address: trim($('#address').val()),
-        city: trim($('#city').val()),
-        state: trim($('#state').val()),
-        zip: trim($('#zip').val()),
-        phone: Trim($('#phone').val())
+        address: $('#address').val().trim(),
+        city: $('#city').val().trim(),
+        state: $('#state').val().trim(),
+        zip: $('#zip').val().trim(),
+        phone: $('#phone').val().trim()
     });
 
     // Request to server
@@ -23,7 +23,7 @@ const addEmployee = ()=>{
         url: 'server/Employee/post.php',
         contentType: 'application/json',
         data: newEmployee,
-        success: (response)=>{
+        success: ()=>{
             // Get updated Employee Records after submittal
             getEmployees();
 

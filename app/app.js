@@ -5,6 +5,7 @@ const onReady = ()=>{
 
     // Listeners
     $('#add-employee').on('click', addEmployee);
+    $('#directory-table-body').on('click', '.remove', removeEmployee)
 }
 
 // Run scripts
