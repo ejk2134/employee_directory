@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- jQuery -->
     <script src="app/assets/jquery.js"></script>
+    <!-- AJAX request modules -->
+    <script src="app/employees/get.js"></script>
     <!-- Frontend scripts -->
     <script src="app/app.js"></script>
     <!-- Stylesheet -->
@@ -14,5 +16,45 @@
 </head>
 <body>
     <h1>Employee directory</h1>
+
+    <!-- Add employee form -->
+    <input type="text">
+
+    <!-- Employee directory table -->
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Last name
+                </th>
+                <th>
+                    First name
+                </th>
+                <th>
+                    Job title
+                </th>
+                <th>
+                    Salary
+                </th>
+                <th>
+                    Address
+                </th>
+                <th>
+                    City
+                </th>
+                <th>
+                    State
+                </th>
+                <th>
+                    Zip
+                </th>
+                <th>
+                    Phone number
+                </th>
+            </tr>
+        </thead>
+        <tbody id="directory-table-body">
+        </tbody>
+    </table>
 </body>
 </html>

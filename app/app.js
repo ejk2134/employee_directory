@@ -1,6 +1,7 @@
 // On page load
-var onReady = ()=>{
+const onReady = ()=>{
     console.log('Scripts sourced');
+    get();
 }
 
 // Run scripts
