@@ -1,11 +1,15 @@
+// Get all employee records from server
 const getEmployees = ()=>{
-    // Get all employee records from server
+    // Request to server
     $.ajax({
         type: 'GET',
         url: 'server/Employee/get.php',
         success: (data)=>{
             // Employee records
             let employeeRecords = data.records;
+
+            // Empty Employee directory table
+            $('#directory-table-body').empty();
 
             // Build Employee directory table
             for (let i = 0; i < employeeRecords.length; i++){
