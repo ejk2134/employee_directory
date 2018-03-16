@@ -5,8 +5,11 @@ This is a simple employee directory that allows for viewing, creating, deleting,
 ## Built with
 
 Apache Server
+
 REST API built with PHP
+
 MYSQL
+
 jQuery
 
 ## Getting started
