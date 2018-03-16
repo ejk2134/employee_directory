@@ -5,8 +5,6 @@ function getOneEmployee(id){
         type: 'GET',
         url: 'server/Employee/getOne.php?id=' + id,
         success: (employeeData)=>{
-            console.log(employeeData);
-
             // Fill current employee data in Edit Form
             $('#last-name').val(employeeData.last_name)
             $('#first-name').val(employeeData.first_name)

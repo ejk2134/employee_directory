@@ -7,12 +7,31 @@ function onReady(){
     $('#add-employee').on('click', addEmployee);
     $('#directory-table-body').on('click', '.remove', removeEmployee);
     $('#directory-table-body').on('click', '.edit', startEdit);
+    $('#cancel-edit').on('click', cancelEdit);
+    $('#edit-employee').on('click', editEmployee);
+}
+
+// Cancel Edit preparation so user can add employees again
+function cancelEdit(){
+    // Hide Cancel buttons and show Add button
+    showButton('cancel');
+
+    // Clear Add/Edit form
+    $('#last-name').val('')
+    $('#first-name').val('')
+    $('#title').val('')
+    $('#salary').val('')
+    $('#address').val('')
+    $('#city').val('')
+    $('#state').val('')
+    $('#zip').val('')
+    $('#phone').val('')
 }
 
 // Toggles button shown in add/edit form
 function showButton(option){
     // If called with "new", show Add Button and hide Edit Button
-    if(option == "cancel"){
+    if(option == 'cancel'){
         $('#add-employee').show();
         $('#edit-employee').hide();
         $('#cancel-edit').hide();
@@ -24,7 +43,7 @@ function showButton(option){
     }
 }
 
-// Sets up employee to be edited
+// Set up forms and buttons for editing an employee
 function startEdit(){
     // Show edit button
     showButton("edit");

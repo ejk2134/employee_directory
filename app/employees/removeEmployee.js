@@ -17,6 +17,9 @@ function removeEmployee(){
         success: ()=>{
             // Get updated Employee Records after successful removal
             getAllEmployees();
+            
+            // Cancel edit to prevent user from editing a record that has been removed
+            cancelEdit();
         }
     })
 }
