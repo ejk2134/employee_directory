@@ -25,7 +25,7 @@ function addEmployee(){
         data: newEmployee,
         success: ()=>{
             // Get updated Employee Records after submittal
-            getEmployees();
+            getAllEmployees();
 
             // Clear Add Employee form
             $('#last-name').val('')

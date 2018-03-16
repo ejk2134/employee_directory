@@ -16,7 +16,7 @@ function removeEmployee(){
         data: idObject,
         success: ()=>{
             // Get updated Employee Records after successful removal
-            getEmployees();
+            getAllEmployees();
         }
     })
 }

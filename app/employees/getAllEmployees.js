@@ -1,5 +1,5 @@
 // Get all employee records from server
-function getEmployees(){
+function getAllEmployees(){
     // Request to server
     $.ajax({
         type: 'GET',
