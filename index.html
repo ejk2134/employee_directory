@@ -9,6 +9,7 @@
     <script src="app/assets/jquery.js"></script>
     <!-- AJAX request modules -->
     <script src="app/employees/addEmployee.js"></script>
+    <script src="app/employees/editEmployee.js"></script>
     <script src="app/employees/getEmployees.js"></script>
     <script src="app/employees/removeEmployee.js"></script>
     <!-- Frontend scripts -->
@@ -21,30 +22,36 @@
 <body>
     <h1>Employee directory</h1>
 
-    <!-- Add employee form -->
-    <label for="last-name">Last name</label>
-    <input id="last-name" type="text">
-    <label for="first-name">First name</label>
-    <input id="first-name" type="text">
-    <br>
-    <label for="title">Job title</label>
-    <input id="title" type="text">
-    <label for="salary">Salary</label>
-    <input id="salary" type="text">
-    <br>
-    <label for="address">Address</label>
-    <input id="address" type="text">
-    <br>
-    <label for="city">City</label>
-    <input id="city" type="text">
-    <label for="state">State</label>
-    <input id="state" type="text">
-    <label for="zip">ZIP</label>
-    <input id="zip" type="text">
-    <br>
-    <label for="phone">Phone number</label>
-    <input id="phone" type="text">
-    <button id="add-employee">Submit</button>
+    <h3>Enter employee </h3>
+
+    <!-- Employee Information Form -->
+    <div id="add-edit-form">
+        <label for="last-name">Last name</label>
+        <input id="last-name" type="text">
+        <label for="first-name">First name</label>
+        <input id="first-name" type="text">
+        <br>
+        <label for="title">Job title</label>
+        <input id="title" type="text">
+        <label for="salary">Salary</label>
+        <input id="salary" type="text">
+        <br>
+        <label for="address">Address</label>
+        <input id="address" type="text">
+        <br>
+        <label for="city">City</label>
+        <input id="city" type="text">
+        <label for="state">State</label>
+        <input id="state" type="text">
+        <label for="zip">ZIP</label>
+        <input id="zip" type="text">
+        <br>
+        <label for="phone">Phone number</label>
+        <input id="phone" type="text">
+    </div>
+    <button id="add-employee">Add Employee</button>
+    <button id="edit-employee" hidden>Submit Changes</button>
+    <button id="cancel-edit" hidden>Cancel</button>
 
     <!-- Employee directory table -->
     <table>

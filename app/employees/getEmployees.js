@@ -3,7 +3,7 @@ function getEmployees(){
     // Request to server
     $.ajax({
         type: 'GET',
-        url: 'server/Employee/get.php',
+        url: 'server/Employee/getAll.php',
         success: (data)=>{
             // Employee records
             let employeeRecords = data.records;

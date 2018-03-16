@@ -57,6 +57,38 @@ class Employee{
         return $statement;
     }
 
+    // Get one employee
+    function getOne(){
+        // Select query
+        $query = "SELECT * FROM workplace.employees WHERE id = ?";
+
+        // Prepare query
+        $statement = $this->conn->prepare($query);
+
+        // Sanitize submitted value
+        $this->id=htmlspecialchars(strip_tags($this->id));
+
+        // Bind submitted value to query statement
+        $statement->bindParam(1, $this->id);
+
+        // Execute query
+        $statement->execute();
+        
+        // Get queried row
+        $row = $statement->fetch(PDO::FETCH_ASSOC);
+
+        // Set values to Employee object
+        $this->last_name = $row['last_name'];
+        $this->first_name = $row['first_name'];
+        $this->title = $row['title'];
+        $this->address = $row['address'];
+        $this->city = $row['city'];
+        $this->state = $row['state'];
+        $this->zip = $row['zip'];
+        $this->phone = $row['phone'];
+        $this->salary = $row['salary'];
+    }
+
     // Create employee
     function post(){
         // Insert query
